@@ -1,0 +1,19 @@
+{
+	"name": "BangaloreRealviewRVGBike20242025Southern",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Ls_HttpServer",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"BaseURL": "https://github.com/Payasgo/adfnewdataproject/blob/master/Datasets/Bangalore-Realview_RVG_Bike_2024-2025_Southern.xlsx"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		}
+	}
+}

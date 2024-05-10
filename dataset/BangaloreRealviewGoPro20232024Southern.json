@@ -1,0 +1,19 @@
+{
+	"name": "BangaloreRealviewGoPro20232024Southern",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Ls_HttpServer",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"BaseURL": "https://github.com/Payasgo/adfnewdataproject/blob/master/Datasets/Bangalore-Realview_GoPro_2023-2024_Southern.xlsx"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		}
+	}
+}
