@@ -104,6 +104,54 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/BangaloreRealviewGoPro20232024Southern')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Ls_HttpServer",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"BaseURL": "https://github.com/Payasgo/adfnewdataproject/blob/master/Datasets/Bangalore-Realview_GoPro_2023-2024_Southern.xlsx"
+					}
+				},
+				"annotations": [],
+				"type": "Binary",
+				"typeProperties": {
+					"location": {
+						"type": "HttpServerLocation"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Ls_HttpServer')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/BangaloreRealviewRVGBike20242025Southern')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Ls_HttpServer",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"BaseURL": "https://github.com/Payasgo/adfnewdataproject/blob/master/Datasets/Bangalore-Realview_RVG_Bike_2024-2025_Southern.xlsx"
+					}
+				},
+				"annotations": [],
+				"type": "Binary",
+				"typeProperties": {
+					"location": {
+						"type": "HttpServerLocation"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Ls_HttpServer')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/Coaches')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -130,6 +178,29 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/Ls_HttpServer')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DS_Binary')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "LS_AzureDataLakeStorage",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Binary",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "Bangalore-Realview_RVG_Bike_2024-2025_Southern.xlsx",
+						"fileSystem": "rawdata"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/LS_AzureDataLakeStorage')]"
 			]
 		},
 		{
@@ -593,6 +664,112 @@
 								}
 							}
 						]
+					},
+					{
+						"name": "BangaloreRealviewGoPro20232024Southern",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "Teams",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "BinarySource",
+								"storeSettings": {
+									"type": "HttpReadSettings",
+									"requestMethod": "GET"
+								},
+								"formatSettings": {
+									"type": "BinaryReadSettings"
+								}
+							},
+							"sink": {
+								"type": "BinarySink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								}
+							},
+							"enableStaging": false
+						},
+						"inputs": [
+							{
+								"referenceName": "BangaloreRealviewGoPro20232024Southern",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DS_Binary",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "Bangalore-Realview_RVG_Bike_2024-2025_Southern",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "BangaloreRealviewGoPro20232024Southern",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "BinarySource",
+								"storeSettings": {
+									"type": "HttpReadSettings",
+									"requestMethod": "GET"
+								},
+								"formatSettings": {
+									"type": "BinaryReadSettings"
+								}
+							},
+							"sink": {
+								"type": "BinarySink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								}
+							},
+							"enableStaging": false
+						},
+						"inputs": [
+							{
+								"referenceName": "BangaloreRealviewRVGBike20242025Southern",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DS_Binary",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
 					}
 				],
 				"policy": {
@@ -606,7 +783,10 @@
 				"[concat(variables('factoryId'), '/datasets/Coaches')]",
 				"[concat(variables('factoryId'), '/datasets/EntriesGender')]",
 				"[concat(variables('factoryId'), '/datasets/Medals')]",
-				"[concat(variables('factoryId'), '/datasets/Teams')]"
+				"[concat(variables('factoryId'), '/datasets/Teams')]",
+				"[concat(variables('factoryId'), '/datasets/BangaloreRealviewGoPro20232024Southern')]",
+				"[concat(variables('factoryId'), '/datasets/DS_Binary')]",
+				"[concat(variables('factoryId'), '/datasets/BangaloreRealviewRVGBike20242025Southern')]"
 			]
 		}
 	]
