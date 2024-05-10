@@ -8,9 +8,6 @@
 		"HttpServer1_password": {
 			"value": ""
 		},
-		"HttpServer2_password": {
-			"value": ""
-		},
 		"LS_AzureDataLakeStorage_accountKey": {
 			"value": ""
 		},
@@ -18,12 +15,6 @@
 			"value": "@{linkedService().BaseURL}"
 		},
 		"HttpServer1_properties_typeProperties_userName": {
-			"value": "payasgo"
-		},
-		"HttpServer2_properties_typeProperties_url": {
-			"value": "https://raw.githubusercontent.com/Payasgo/adfnewdataproject/master/Datasets/Coaches.csv"
-		},
-		"HttpServer2_properties_typeProperties_userName": {
 			"value": "payasgo"
 		},
 		"LS_AzureDataLakeStorage_properties_typeProperties_url": {

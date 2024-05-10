@@ -11,10 +11,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'HttpServer1'"
 		},
-		"HttpServer2_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'HttpServer2'"
-		},
 		"LS_AzureDataLakeStorage_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_AzureDataLakeStorage'"
@@ -24,14 +20,6 @@
 			"defaultValue": "@{linkedService().BaseURL}"
 		},
 		"HttpServer1_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "payasgo"
-		},
-		"HttpServer2_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://raw.githubusercontent.com/Payasgo/adfnewdataproject/master/Datasets/Coaches.csv"
-		},
-		"HttpServer2_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "payasgo"
 		},
@@ -69,9 +57,6 @@
 					"HttpServer1_password": {
 						"value": "[parameters('HttpServer1_password')]"
 					},
-					"HttpServer2_password": {
-						"value": "[parameters('HttpServer2_password')]"
-					},
 					"LS_AzureDataLakeStorage_accountKey": {
 						"value": "[parameters('LS_AzureDataLakeStorage_accountKey')]"
 					},
@@ -80,12 +65,6 @@
 					},
 					"HttpServer1_properties_typeProperties_userName": {
 						"value": "[parameters('HttpServer1_properties_typeProperties_userName')]"
-					},
-					"HttpServer2_properties_typeProperties_url": {
-						"value": "[parameters('HttpServer2_properties_typeProperties_url')]"
-					},
-					"HttpServer2_properties_typeProperties_userName": {
-						"value": "[parameters('HttpServer2_properties_typeProperties_userName')]"
 					},
 					"LS_AzureDataLakeStorage_properties_typeProperties_url": {
 						"value": "[parameters('LS_AzureDataLakeStorage_properties_typeProperties_url')]"
