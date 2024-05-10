@@ -81,7 +81,10 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "Ls_HttpServer",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"BaseURL": "https://raw.githubusercontent.com/Payasgo/adfnewdataproject/master/Datasets/Athletes.csv"
+					}
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -107,7 +110,10 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "Ls_HttpServer",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"BaseURL": "https://raw.githubusercontent.com/Payasgo/adfnewdataproject/master/Datasets/Coaches.csv"
+					}
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -169,7 +175,10 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "Ls_HttpServer",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"BaseURL": "https://raw.githubusercontent.com/Payasgo/adfnewdataproject/master/Datasets/EntriesGender.csv"
+					}
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -195,7 +204,10 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "Ls_HttpServer",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"BaseURL": "https://raw.githubusercontent.com/Payasgo/adfnewdataproject/master/Datasets/Medals.csv"
+					}
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -221,7 +233,10 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "Ls_HttpServer",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"BaseURL": "https://raw.githubusercontent.com/Payasgo/adfnewdataproject/master/Datasets/Teams.csv"
+					}
 				},
 				"annotations": [],
 				"type": "DelimitedText",
