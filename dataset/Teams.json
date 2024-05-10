@@ -3,7 +3,10 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Ls_HttpServer",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"BaseURL": "https://raw.githubusercontent.com/Payasgo/adfnewdataproject/master/Datasets/Teams.csv"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
