@@ -5,20 +5,20 @@
 		"factoryName": {
 			"value": "pipelineconfigmanagement"
 		},
-		"HttpServer1_password": {
-			"value": ""
-		},
 		"LS_AzureDataLakeStorage_accountKey": {
 			"value": ""
 		},
-		"HttpServer1_properties_typeProperties_url": {
-			"value": "@{linkedService().BaseURL}"
-		},
-		"HttpServer1_properties_typeProperties_userName": {
-			"value": "payasgo"
+		"Ls_HttpServer_password": {
+			"value": ""
 		},
 		"LS_AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://adlspipeconfig.dfs.core.windows.net/"
+		},
+		"Ls_HttpServer_properties_typeProperties_url": {
+			"value": "@{linkedService().BaseURL}"
+		},
+		"Ls_HttpServer_properties_typeProperties_userName": {
+			"value": "payasgo"
 		},
 		"containerUri": {
 			"value": ""

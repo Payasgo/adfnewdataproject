@@ -7,25 +7,25 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "pipelineconfigmanagement"
 		},
-		"HttpServer1_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'HttpServer1'"
-		},
 		"LS_AzureDataLakeStorage_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_AzureDataLakeStorage'"
 		},
-		"HttpServer1_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "@{linkedService().BaseURL}"
-		},
-		"HttpServer1_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "payasgo"
+		"Ls_HttpServer_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Ls_HttpServer'"
 		},
 		"LS_AzureDataLakeStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlspipeconfig.dfs.core.windows.net/"
+		},
+		"Ls_HttpServer_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "@{linkedService().BaseURL}"
+		},
+		"Ls_HttpServer_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "payasgo"
 		},
 		"containerUri": {
 			"type": "string",
@@ -54,20 +54,20 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"HttpServer1_password": {
-						"value": "[parameters('HttpServer1_password')]"
-					},
 					"LS_AzureDataLakeStorage_accountKey": {
 						"value": "[parameters('LS_AzureDataLakeStorage_accountKey')]"
 					},
-					"HttpServer1_properties_typeProperties_url": {
-						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
-					},
-					"HttpServer1_properties_typeProperties_userName": {
-						"value": "[parameters('HttpServer1_properties_typeProperties_userName')]"
+					"Ls_HttpServer_password": {
+						"value": "[parameters('Ls_HttpServer_password')]"
 					},
 					"LS_AzureDataLakeStorage_properties_typeProperties_url": {
 						"value": "[parameters('LS_AzureDataLakeStorage_properties_typeProperties_url')]"
+					},
+					"Ls_HttpServer_properties_typeProperties_url": {
+						"value": "[parameters('Ls_HttpServer_properties_typeProperties_url')]"
+					},
+					"Ls_HttpServer_properties_typeProperties_userName": {
+						"value": "[parameters('Ls_HttpServer_properties_typeProperties_userName')]"
 					}
 				}
 			},
