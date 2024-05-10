@@ -257,7 +257,10 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "HttpServer1",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"BaseURL": "https://raw.githubusercontent.com/Payasgo/adfnewdataproject/master/Datasets/Teams.csv"
+					}
 				},
 				"annotations": [],
 				"type": "DelimitedText",
