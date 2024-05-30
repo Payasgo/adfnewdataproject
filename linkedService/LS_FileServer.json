@@ -1,0 +1,17 @@
+{
+	"name": "LS_FileServer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\Users\\KranthiYarlagadda\\Downloads\\Datasets\\Datasets\\Datasets",
+			"userId": "KranthiYarlagadda",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0NWE2NzQ3OS1mOWQzLTQxNjctOGUxMy1jZTI5YzBkMzNlYTUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SHIRintegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

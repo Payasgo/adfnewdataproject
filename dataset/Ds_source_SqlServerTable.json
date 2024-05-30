@@ -1,0 +1,18 @@
+{
+	"name": "Ds_source_SqlServerTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_SqlServer",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"ServerName": "KRANTHI",
+				"DatabseName": "AdventureWorks2019",
+				"username": "adf"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

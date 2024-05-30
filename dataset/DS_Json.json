@@ -1,19 +1,18 @@
 {
-	"name": "DS_Binary",
+	"name": "DS_Json",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_AzureDataLakeStorage",
+			"referenceName": "LS_HttpServer",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "Binary",
+		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"folderPath": "testfiles",
-				"fileSystem": "sampledata"
+				"type": "HttpServerLocation"
 			}
-		}
+		},
+		"schema": {}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }

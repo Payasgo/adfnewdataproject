@@ -1,5 +1,5 @@
 {
-	"name": "DS_Binary",
+	"name": "ls_Binary",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_AzureDataLakeStorage",
@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "testfiles",
 				"fileSystem": "sampledata"
 			}
 		}

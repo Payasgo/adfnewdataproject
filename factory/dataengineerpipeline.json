@@ -1,0 +1,9 @@
+{
+	"name": "dataengineerpipeline",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0feb87c2-6a57-424a-9dea-ce6180c73e04",
+		"tenantId": "dca6803c-8792-4ed7-8757-b1d473fcfb44"
+	}
+}
